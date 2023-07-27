@@ -3,10 +3,32 @@
 }
 
 .bg {
-  background: url("/assets/Background Image.png");
+  background: url("/assets/Background Image.png") no-repeat;
+  background-size: cover;
+  background-position: cener;
 }
 
-.one {
-  width: 570px;
-  height: 535px;
+.one::before {
+  content: "";
+  position: absolute;
+  top: 301px;
+  left: 200px;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/Rectangle 5.png") no-repeat;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-50px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.animate {
+  animation: float 5s linear infinite;
 }/*# sourceMappingURL=main.css.map */
