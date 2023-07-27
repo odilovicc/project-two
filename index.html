@@ -6,16 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></head>
 <body class="w-screen overflow-x-hidden">
-    
+
     <!-- Menu section -->
     <div class="container flex justify-center mx-auto relative">
         <div class="container mx-auto py-5 absolute top-0 z-50">
-            <div class="flex items-center mb-5 text-white">
+            <div class="flex items-center mb-5 text-white contacts hidden sm:flex">
                 <img src="/assets/Icons/mail.png" width="22px" height="22px" class="mr-3" alt="">
                 <h1 class="mr-12">Info@youremail.com</h1>
                 <img src="/assets/Icons/call.png" width="22px" height="22px" class="mr-3" alt="">
@@ -28,11 +29,25 @@
                     <img src="/assets/Icons/fill/youtube-fill.png" alt="">
                 </div>
             </div>
-            <div class="bg-white items-center flex gap-10 relative rounded-md pl-14 py-2 uppercase ">
-                <a href="#" class="hover:text-[#5956e9] hover:underline transition duration-200">Home</a>
-                <a href="#" class="hover:text-[#5956e9] hover:underline transition duration-200">about</a>
-                <a href="#" class="hover:text-[#5956e9] hover:underline transition duration-200">Features</a>
-                <div class="logo scale-105 shadow-2xl p-8 left-1/3 ml-32 absolute z-50 bg-white rounded-md">
+            <div class="bg-white items-center flex gap-10 relative rounded-md md:pl-14 pl-3 py-2 uppercase ">
+                <a href="#" class="hidden md:inline-block hover:text-[#5956e9] hover:underline transition duration-200">Home</a>
+                <a href="#" class="hidden md:inline-block hover:text-[#5956e9] hover:underline transition duration-200">about</a>
+                <a href="#" class="hidden md:inline-block hover:text-[#5956e9] hover:underline transition duration-200">Features</a>
+                <a href="#" id="modalToggler" class="md:hidden block"><img src="/assets/menu-line.svg" alt=""></a>
+                <div id="modal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                   <div class="w-full flex justify-center items-center h-full bg-white relative">
+                    <div class="">
+                        <!-- Modal content goes here -->
+                        <li class="list-none py-6"><a href="#" class="text-2xl uppercase ">HOME</a></li>
+                        <li class="list-none py-6"><a href="#" class="text-2xl uppercase ">About</a></li>
+                        <li class="list-none py-6"><a href="#" class="text-2xl uppercase ">Features</a></li>
+                        <li class="list-none py-6"><a href="#" class="text-2xl uppercase ">Screenshot</a></li>
+                        <li class="list-none py-6"><a href="#" class="text-2xl uppercase ">Blog</a></li>
+                        <button id="modalClose" class="bg-blue-500 text-white px-4 py-4 absolute top-8 right-8 rounded-full"><img src="/assets/close-fill.svg" alt=""></button>
+                      </div>
+                   </div>
+                  </div>
+                <div class="logo md:scale-105 scale-75 px-2 py-8 shadow-2xl md:p-8 md:left-1/3 md:ml-32 ml-20  absolute md:z-50 bg-white rounded-md">
                     <div class="inline-block">
                         <svg width="167" height="28" viewBox="0 0 167 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="167" height="28" fill="url(#pattern0)"/>
@@ -46,9 +61,27 @@
                 </div>                   
             </div>
             <div class="ml-auto items-center flex mr-1 gap-10">
-                <a href="#" class="hover:text-[#5956e9] hover:underline transition duration-200">Screenshot</a>
-                <a href="#" class="hover:text-[#5956e9] hover:underline transition duration-200">Blog</a>
-                <a href="#" class="bg-[#5956E9] border-2 border-transparent hover:border-[#5956e9] hover:text-[#5956e9] hover:bg-white transition duration-500 font-semibold rounded-md text-white py-3 px-4">Download</a>
+                <a href="#" class="hidden md:inline-block hover:text-[#5956e9] hover:underline transition duration-200">Screenshot</a>
+                <a href="#" class="hidden md:inline-block hover:text-[#5956e9] hover:underline transition duration-200">Blog</a>
+                <a href="#" 
+                class="
+                bg-[#5956E9] 
+                border-2 
+                border-transparent 
+                hover:border-[#5956e9] 
+                hover:text-[#5956e9]
+                hover:bg-white 
+                transition 
+                duration-500 
+                font-semibold 
+                rounded-md 
+                text-white  
+                
+                md:py-3
+                md:px-4 
+                text-sm
+                py-3 
+                px-2">Download</a>
             </div>
             
         </div>
@@ -88,21 +121,21 @@
                 <img src="/assets/android-smartphone-free-mockup 1.png" class="animate" alt="">
             </div>
             <div class="w-1/2">
-                <div class="flex gap-4 shadow-md px-4 py-8 rounded-md mb-10">
+                <div class="flex gap-4 shadow-md transition duration-200 hover:scale-110 px-4 py-8 rounded-md mb-10">
                     <img src="/assets/checkbox-circle-fill.svg" class="inline-block p-2 py-0 mb-2" alt="">
                     <li class="list-none">
                         <h1 class="uppercase text-2xl mb-3">Creative design  </h1>
                         <p class="text-[#6C6C72] text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.</p>
                     </li>
                 </div>
-                <div class="flex gap-4 shadow-md px-4 py-8 rounded-md mb-10">
+                <div class="flex gap-4 shadow-md transition duration-200 hover:scale-110 px-4 py-8 rounded-md mb-10">
                     <img src="/assets/checkbox-circle-fill.svg" class="inline-block p-2 py-0 mb-2" alt="">
                     <li class="list-none">
                         <h1 class="uppercase text-2xl mb-3">easy to use  </h1>
                         <p class="text-[#6C6C72] text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.</p>
                     </li>
                 </div>
-                <div class="flex gap-4 shadow-md px-4 py-8 rounded-md">
+                <div class="flex gap-4 shadow-md transition duration-200 hover:scale-110 px-4 py-8 rounded-md">
                     <img src="/assets/checkbox-circle-fill.svg" class="inline-block p-2 py-0 mb-2" alt="">
                     <li class="list-none">
                         <h1 class="uppercase text-2xl mb-3">Best user experince  </h1>
@@ -156,6 +189,20 @@
     </div>
 </div>
     <!-- Features section -->
+<script>
+    const modal = document.getElementById('modal');
+const modalToggler = document.getElementById('modalToggler');
+const modalClose = document.getElementById('modalClose');
 
+// Add event listener to modal toggler
+modalToggler.addEventListener('click', () => {
+  modal.classList.toggle('hidden');
+});
+
+// Add event listener to modal close button
+modalClose.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+</script>
 </body>
 </html>

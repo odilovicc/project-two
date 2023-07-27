@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
-    extend: {
-      backgroundImage: {
-        'hero-pattern': "url('/assets/Background Image.png')",
-      }
-    }
+    screens: {
+      'sm': '375px',
+      // => @media (min-width: 576px) { ... }
+    },
   }
 }
