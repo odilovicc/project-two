@@ -8,6 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+        crossorigin="anonymous">
+</script>
+<script src="js/jquery.numscroll.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></head>
@@ -88,7 +93,7 @@
     </div>
     </div>
 
-    <!-- Menu section -->
+    <!-- Hero section -->
     <div class="bg">
         <div class="container pt-48 mx-auto py-5 md:h-screen bg-hero-pattern block md:flex items-center justify-center">
             <div class="block md:flex one md:items-center md:w-1/3 mx-8 px-10 py-8 md:justify-center bg-white ">
@@ -107,7 +112,7 @@
             </div>
         </div>
     </div>
-    <!-- Menu section -->
+    <!-- Hero section -->
 
     <!-- About section -->
     
@@ -192,7 +197,7 @@
 
     <!-- carousel section -->
 
-    <div class="container h-screen mx-auto py-5 pt-20">
+    <div class="container h-screen mx-auto py-5 pt-20 mb-32">
         <div class="w-full md:w-1/2 text-center mx-auto mb-20 px-4 md:px-0">
             <h1 class="text-3xl mb-7 font-bold">Checkout Our App Interface Look</h1>
             <p class="text-[#6C6C72]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
@@ -234,7 +239,45 @@
 
     <!-- carousel section -->
 
+    <!-- Download section -->
+
+    <div class="container mx-auto py-5">
+        <div class="block md:flex">
+            <div class="block w-full mb-12 px-4 md:w-1/2">
+                <h1 class="text-2xl md:text-4xl mb-4 font-bold uppercase">Download App Now</h1>
+                <p class="text-[#6C6C72]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
+                <div class="flex gap-12 mt-11">
+                    <img src="/assets/Icons/toppng 1.png" alt="">
+                    <img src="/assets/Icons/PngItem_1144050 2.png" class="ml-auto md:ml-0" alt="">
+                </div>
+                <div class="flex mt-14 md:justify-start justify-center w-full gap-2 md:gap-12">
+                    <div class="transition duration-400 hover:scale-110 hover:cursor-pointer justify-center text-white rounded-md text-center p-4 md:p-5 md:px-8 bg-[#5851EA]">
+                            <img src="/assets/download-2-fill.svg" class="mx-auto mb-4" alt="">
+                            <h1 class="text-2xl mb-4">59865</h1>
+                            <h1 class="md:text-xl text-sm md:font-semibold md:uppercase">Download</h1>
+                    </div>
+                    <div class="transition duration-400 hover:scale-110 hover:cursor-pointer justify-center text-white rounded-md text-center p-4 md:p-5 md:px-16 bg-[#5851EA]">
+                            <img src="/assets/thumb-up-fill.svg" class="mx-auto mb-4" alt="">
+                            <h1 class="text-2xl mb-4">29852</h1>
+                            <h1 class="md:text-xl text-sm md:font-semibold md:uppercase">LIKE</h1>
+                    </div>
+                    <div class="transition duration-400 hover:scale-110 hover:cursor-pointer justify-center text-white rounded-md text-center p-4 md:p-5 md:px-8 bg-[#5851EA]">
+                            <img src="/assets/star-fill.svg" class="mx-auto mb-4" alt="">
+                            <h1 class="text-2xl mb-4">1500</h1>
+                            <h1 class="md:text-xl text-sm md:font-semibold md:uppercase">5 star rating</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="block w-full md:w-1/2">
+                <img src="/assets/Gravity-Scene-iPhone-12-Mockup 1.png" class="m-0 md:mx-auto animate" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Download section -->
+
 <script>
+  
     const modal = document.getElementById('modal');
 const modalToggler = document.getElementById('modalToggler');
 const modalClose = document.getElementById('modalClose');
