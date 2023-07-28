@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotating Lines</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+     <script>
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const image = new Image();
+        image.src = '/assets/Profile Image.png';
+         image.onload = function() {
+            canvas.width = image.width;
+            canvas.height = image.height;
+             const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = Math.min(centerX, centerY) - 10;
+            const numLines = 36;
+            const angleIncrement = (2 * Math.PI) / numLines;
+             function draw() {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                 // Draw the image
+                context.drawImage(image, 0, 0);
+                 // Draw rotating lines
+                for (let i = 0; i < numLines; i++) {
+                    const angle = i * angleIncrement;
+                    const x = centerX + Math.cos(angle) * radius;
+                    const y = centerY + Math.sin(angle) * radius;
+                     context.beginPath();
+                    context.moveTo(centerX, centerY);
+                    context.lineTo(x, y);
+                    context.strokeStyle = 'red';
+                    context.stroke();
+                }
+                 requestAnimationFrame(draw);
+            }
+             draw();
+        };
+    </script>
+</body>
+</html>

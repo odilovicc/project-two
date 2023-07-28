@@ -21,3 +21,11 @@
 .animate{
     animation: float 5s linear infinite;
 }
+.height{
+	height: 50% !important;
+}
+canvas {
+	display: block;
+	margin: 0 auto;
+	border: 1px solid black;
+}
