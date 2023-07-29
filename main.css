@@ -21,4 +21,8 @@
 }
 .animate {
   animation: float 5s linear infinite;
+}
+
+.height {
+  height: 50% !important;
 }/*# sourceMappingURL=main.css.map */
